@@ -1,0 +1,41 @@
+<main>
+    <div class="theme-title">    
+        <div class="theme-container" *ngFor="let theme of themeList">
+            <div class="theme-name-wrapper">
+                <div class="theme-name">
+                    <a href="#" class="normal">
+                        <h2>{{theme.themeName}}</h2>
+                    </a>
+                    <div class="columns">
+                        <div>
+                            <p>Date: <time>{{theme.created_at}}</time></p>
+                            <div class="nick-name">
+                                <p>Username: <span>{{theme.userId.username}}</span></p>
+                            </div>
+                        </div>
+                        <div class="subscribers">
+                            <!-- <button class="subscribe">Subscribe</button> -->
+                            <p>Subscribers: <span>{{theme.subscribers.length}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</main>
+<aside>
+    <div class="aside">
+        <h2 class="title">
+            Recent posts
+        </h2>
+        <div>
+            <div class="aside-theme" *ngFor="let post of postList">
+                <a href="#">
+                    <h3>{{post.text}}</h3>
+                    <p>{{post.userId.username}}</p>
+                    <p><span>{{post.created_at}}</span></p>
+                </a>
+            </div>
+        </div>
+    </div>
+</aside>
