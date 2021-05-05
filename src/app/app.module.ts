@@ -7,21 +7,22 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { PostService } from './services/post.service';
 import { ThemeService } from './services/theme.service';
-import { ThemeComponent } from './theme/theme-component';
+import { UserService } from './services/user.service';
+import { ThemeModule } from './theme-module/theme.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ThemeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
+    ThemeModule,
     HttpClientModule
   ],
-  providers: [ThemeService, PostService],
+  providers: [ThemeService, PostService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

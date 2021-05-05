@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from "rxjs/operators"
-import { IPost } from '../interfaces/post';
-import { ITheme } from '../interfaces/theme';
-import { PostService } from '../services/post.service';
-import { ThemeService } from '../services/theme.service';
+import { IPost } from '../../interfaces/post';
+import { ITheme } from '../../interfaces/theme';
+import { PostService } from '../../services/post.service';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-theme',

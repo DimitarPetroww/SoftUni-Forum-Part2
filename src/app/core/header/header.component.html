@@ -3,23 +3,23 @@
         <div class="logo-wrap">
             <p class="logo"><span class="logo">SoftUni Forum</span></p>
         </div>
-        <div class="mini-navbar">
+        <div class="mini-navbar" *ngIf="!isLogged">
             <ul>
                 <li>
-                    <a href="#" >Login</a>
+                    <a href="#" routerLink="/login">Login</a>
                 </li>
                 <li>
-                    <a href="#">Register</a>
+                    <a href="#" routerLink="/register">Register</a>
                 </li>
             </ul>
         </div>
-        <div class="mini-navbar">
+        <div class="mini-navbar" *ngIf="isLogged">
             <ul>
                 <li>
                     <div>Hello, Username</div>
                 </li>
                 <li>
-                    <a href="#">Logout</a>
+                    <a href="#" (click)="logoutHandler()">Logout</a>
                 </li>
             </ul>
         </div>
@@ -30,10 +30,10 @@
                 <a routerLink="/">Home</a>
             </li>
             <li>
-                <a [routerLink]="['/themes']">Themes</a>
+                <a routerLink="/themes">Themes</a>
             </li>
             <li>
-                <a href="#">New Theme</a>
+                <a routerLink="/add-theme">New Theme</a>
             </li>
         </ul>
     </nav>

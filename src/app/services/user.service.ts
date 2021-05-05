@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class UserService {
@@ -7,6 +8,9 @@ export class UserService {
   constructor() { }
 
   login(): void {
+    this.isLogged = true
+  }
+  register(): void {
     this.isLogged = true
   }
   logout(): void {

@@ -1,5 +1,5 @@
 <main>
-    <div class="theme-title">
+    <div class="theme-title" *ngIf="themeList">
         <div class="theme-container" *ngFor="let theme of themeList">
             <div class="theme-name-wrapper">
                 <div class="theme-name">
@@ -22,9 +22,10 @@
             </div>
         </div>
     </div>
+    <div *ngIf="!themeList">Loading....</div>
 </main>
 <aside>
-    <div class="aside">
+    <div class="aside" *ngIf="postList">
         <h2 class="title">
             Recent posts
         </h2>
@@ -38,5 +39,5 @@
             </div>
         </div>
     </div>
-
+    <div *ngIf="!postList">Loading....</div>
 </aside>
