@@ -7,13 +7,13 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { PostService } from './services/post.service';
 import { ThemeService } from './services/theme.service';
-import { ThemeComponent } from './theme/theme.component';
+import { ThemeComponent } from './theme/theme-component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ThemeComponent,
-    HomeComponent
+    HomeComponent,
+    ThemeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,5 +25,5 @@ import { ThemeComponent } from './theme/theme.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { 
-  
+
 }

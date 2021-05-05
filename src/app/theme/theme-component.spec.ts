@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThemeComponent } from './theme.component';
+import { ThemeComponent } from './theme-component';
 
-describe('ThemeComponent', () => {
+describe('ThemeComponentComponent', () => {
   let component: ThemeComponent;
   let fixture: ComponentFixture<ThemeComponent>;
 
