@@ -14,4 +14,7 @@ export class ThemeService {
   loadThemes(): Observable<ITheme[]> {
     return this.http.get<ITheme[]>(`${apiURL}/themes`)
   }
+  getTheme(id: string): Observable<ITheme> {
+    return this.http.get<ITheme>(`${apiURL}/themes/${id}`)
+  }
 }

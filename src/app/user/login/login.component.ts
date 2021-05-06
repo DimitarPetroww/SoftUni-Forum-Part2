@@ -16,7 +16,7 @@ export class LoginComponent  {
 
   loginHandler(): void {
     this.userService.login()
-    this.router.navigate(["/"])
+    this.router.navigate(["/themes"])
   }
 
 }

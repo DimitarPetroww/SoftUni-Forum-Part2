@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Injectable()
 export class UserService {
-  isLogged = false
-
+  get isLogged(): boolean {
+    return !!localStorage.getItem("isLogged")
+  }
   constructor() { }
 
   login(): void {
-    this.isLogged = true
+    localStorage.setItem("isLogged", "true")
   }
   register(): void {
-    this.isLogged = true
+    localStorage.setItem("isLogged", "true")
   }
   logout(): void {
-    this.isLogged = false
+    localStorage.removeItem("isLogged")
   }
 }

@@ -6,8 +6,6 @@ import { UserRoutingModule } from './user-routing.module';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 
-
-
 @NgModule({
   declarations: [RegisterComponent, LoginComponent, ProfileComponent],
   imports: [
@@ -15,6 +13,6 @@ import { ProfileComponent } from './profile/profile.component';
     RouterModule,
     UserRoutingModule
   ],
-  exports: [RegisterComponent, LoginComponent]
+  exports: []
 })
 export class UserModule { }
