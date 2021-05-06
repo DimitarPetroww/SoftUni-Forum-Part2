@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { FooterComponent } from './core/footer/footer.component';
+import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PostService } from './services/post.service';
@@ -27,7 +29,7 @@ import { UserModule } from './user/user.module';
     UserModule
   ],
   providers: [ThemeService, PostService, UserService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, FooterComponent, HeaderComponent]
 })
 export class AppModule { 
 

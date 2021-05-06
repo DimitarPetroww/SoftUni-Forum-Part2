@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -12,10 +12,11 @@ export class LoginComponent  {
     return this.userService.isLogged
   }
 
-  constructor(private userService: UserService, private route: ActivatedRoute) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   loginHandler(): void {
     this.userService.login()
+    this.router.navigate(["/"])
   }
 
 }

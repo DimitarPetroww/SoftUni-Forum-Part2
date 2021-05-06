@@ -18,9 +18,9 @@ const routes: Routes = [
     path: "add-theme",
     component: AddThemeComponent
   },
-  // {
-  //   path: "**",
-  //   component: NotFoundComponent
-  // }
+  {
+    path: "**",
+    component: NotFoundComponent
+  }
 ];
 export const AppRoutingModule = RouterModule.forRoot(routes)
